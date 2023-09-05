@@ -22,7 +22,7 @@ sudo apt install -y thunar thunar-archive-plugin thunar-volman file-roller
 sudo apt install -y pulseaudio pavucontrol alsa-utils volumeicon-alsa pamixer
 
 # Miscellaneous
-sudo apt install -y neofetch firefox-esr lxappearance feh neovim btop wget lutris steam keepassxc whois curl flameshot
+sudo apt install -y neofetch firefox-esr lxappearance feh neovim btop wget keepassxc whois curl flameshot
 
 # Virtualization
 sudo apt install -y virt-manager qemu-system
