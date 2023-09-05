@@ -3,14 +3,14 @@
 # xorg
 sudo apt install -y xorg xbacklight xbindkeys xvkbd xinput
 
+# Build essentials
 sudo apt install -y build-essential
 
 # Creates default folder in user dir
 xdg-user-dirs-update
 
-
 # Networking
-# sudo apt install -y network-manager
+sudo apt install -y network-manager
 
 # Terminal
 sudo apt install -y tmux alacritty
@@ -22,7 +22,10 @@ sudo apt install -y thunar thunar-archive-plugin thunar-volman file-roller
 sudo apt install -y pulseaudio pavucontrol alsa-utils volumeicon-alsa pamixer
 
 # Miscellaneous
-sudo apt install -y neofetch firefox-esr lxappearance feh nvim btop wget discord spotify lutris steam keepassxc whois curl flameshot vscodium obsidian
+sudo apt install -y neofetch firefox-esr lxappearance feh neovim btop wget lutris steam keepassxc whois curl flameshot
 
 # Virtualization
-sudo apt install -y virt-manager qemu
+sudo apt install -y virt-manager qemu-system
+
+# Window manager
+sudo apt install -y i3-wm suckless-tools sxhkd polybar
