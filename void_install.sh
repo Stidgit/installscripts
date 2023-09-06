@@ -10,9 +10,6 @@ fi
 # Update package repositories and upgrade existing packages
 sudo xbps-install -Suv
 
-# xbps helper
-# sudo xbps-install -Sy vpm
-
 # xorg
 sudo xbps-install -Sy xorg
 
@@ -33,6 +30,7 @@ sudo usermod -aG video "$USER"
 
 # Useful stuff
 sudo xbps-install -Sy flameshot neovim btop firefox wget curl
+# sudo xbps-install -Sy vpm void-repo-nonfree
 
 # Network manager
 xbps-install -Sy NetworkManager
