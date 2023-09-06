@@ -20,7 +20,7 @@ sudo xbps-install -Sy i3-gaps i3status picom nitrogen lxappearance feh rofi
 sudo xbps-install -Sy alacritty
 
 # Install LightDM and the GTK greeter
-sudo xbps-install -Sy lightdm lightdm-gtk-greeter
+sudo xbps-install -Sy lightdm lightdm-gtk3-greeter
 
 # Enable LightDM to start at boot
 sudo ln -s /etc/sv/lightdm /var/service/
