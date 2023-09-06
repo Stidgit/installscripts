@@ -10,6 +10,9 @@ fi
 # Update package repositories and upgrade existing packages
 sudo xbps-install -Suv
 
+# xorg
+sudo xbps-install -Sy xorg
+
 # Install i3 window manager and other essential tools
 sudo xbps-install -Sy i3-gaps i3status picom nitrogen lxappearance feh rofi
 
