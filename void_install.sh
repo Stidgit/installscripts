@@ -10,6 +10,9 @@ fi
 # Update package repositories and upgrade existing packages
 sudo xbps-install -Suv
 
+# xbps helper
+# sudo xbps-install -Sy vpm
+
 # xorg
 sudo xbps-install -Sy xorg
 
