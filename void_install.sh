@@ -11,8 +11,6 @@ sudo xbps-install -Suv
 
 # Install i3 window manager and other essential tools
 sudo xbps-install -Sy i3-gaps i3status picom nitrogen lxappearance feh rofi
-mkdir -p ~/.config/i3
-cp /usr/share/doc/i3/config ~/.config/i3/config
 
 # Install terminal
 sudo xbps-install -Sy alacritty
