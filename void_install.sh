@@ -38,7 +38,7 @@ ln -s /etc/sv/NetworkManager /var/service/
 # Virtualization
 sudo xbps-install -y virt-manager qemu
 
-# Reboot to start LightDM
+# Reboot
 read -p "Installation complete. Reboot now? (y/n): " choice
 case "$choice" in
   [yY]|[yY][eE][sS])
