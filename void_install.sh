@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -e
 # Quick Install script for Void Linux
 # Ensure root
 if [ "$(id -u)" -ne 0 ]; then
@@ -39,7 +39,14 @@ ln -s /etc/sv/NetworkManager /var/service/
 sudo xbps-install -y virt-manager qemu
 
 # Reboot to start LightDM
-echo "Installation complete. Rebooting in 5 seconds..."
-sleep 5
-sudo reboot
+read -p "Installation complete. Reboot now? (y/n): " choice
+case "$choice" in
+  [yY]|[yY][eE][sS])
+    sudo reboot
+    ;;
+  *)
+    echo "You can manually reboot your system when you're ready."
+    ;;
+esac
+
 
