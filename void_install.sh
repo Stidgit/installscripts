@@ -11,6 +11,10 @@ fi
 sudo xbps-install -Suv
 sudo xbps-install -u xbps
 
+# Restarting services after update
+sudo xbps-install xtools
+xcheckrestart
+
 # xorg
 sudo xbps-install -y xorg
 
