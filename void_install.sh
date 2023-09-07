@@ -9,6 +9,7 @@ fi
 
 # Update package repositories and upgrade existing packages
 sudo xbps-install -Suv
+sudo xbps-install -u xbps
 
 # xorg
 sudo xbps-install -y xorg
