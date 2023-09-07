@@ -22,8 +22,6 @@ sudo xbps-install -y alacritty
 
 # Install LightDM and the GTK greeter
 sudo xbps-install -y lightdm lightdm-gtk3-greeter
-
-# Enable LightDM to start at boot
 sudo ln -s /etc/sv/lightdm /var/service/
 
 # Add your user to the video group for graphics acceleration (replace 'yourusername' with your actual username)
