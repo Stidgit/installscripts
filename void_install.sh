@@ -11,16 +11,16 @@ fi
 sudo xbps-install -Suv
 
 # xorg
-sudo xbps-install -Sy xorg
+sudo xbps-install -y xorg
 
 # Install i3 window manager and other essential tools
-sudo xbps-install -Sy i3-gaps i3status picom nitrogen lxappearance feh rofi
+sudo xbps-install -y i3-gaps i3status picom nitrogen lxappearance feh rofi
 
 # Install terminal
-sudo xbps-install -Sy alacritty
+sudo xbps-install -y alacritty
 
 # Install LightDM and the GTK greeter
-sudo xbps-install -Sy lightdm lightdm-gtk3-greeter
+sudo xbps-install -y lightdm lightdm-gtk3-greeter
 
 # Enable LightDM to start at boot
 sudo ln -s /etc/sv/lightdm /var/service/
@@ -29,15 +29,15 @@ sudo ln -s /etc/sv/lightdm /var/service/
 sudo usermod -aG video "$USER"
 
 # Useful stuff
-sudo xbps-install -Sy flameshot neovim btop firefox wget curl
+sudo xbps-install -y flameshot neovim btop firefox wget curl
 # sudo xbps-install -Sy vpm void-repo-nonfree
 
 # Network manager
-xbps-install -Sy NetworkManager
+xbps-install -y NetworkManager
 ln -s /etc/sv/NetworkManager /var/service/
 
 # Virtualization
-sudo xbps-install -Sy virt-manager qemu
+sudo xbps-install -y virt-manager qemu
 
 # Reboot to start LightDM
 echo "Installation complete. Rebooting in 5 seconds..."
