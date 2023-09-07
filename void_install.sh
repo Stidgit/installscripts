@@ -28,7 +28,7 @@ sudo ln -s /etc/sv/lightdm /var/service/
 sudo usermod -aG video "$USER"
 
 # Useful stuff
-sudo xbps-install -y flameshot neovim btop firefox wget curl
+sudo xbps-install -y flameshot neovim btop firefox wget curl keepassxc
 # sudo xbps-install -Sy vpm void-repo-nonfree
 
 # Network manager
