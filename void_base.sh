@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Audio
 sudo xbps-install -Syu
