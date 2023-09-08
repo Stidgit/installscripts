@@ -28,6 +28,9 @@ sudo xbps-install -y alacritty
 sudo xbps-install -y lightdm lightdm-gtk3-greeter
 sudo ln -s /etc/sv/lightdm /var/service/
 
+# Enable dbus-service
+sudo ln -sf /etc/sv/dbus /var/service
+
 # Add your user to the video group for graphics acceleration (replace 'yourusername' with your actual username)
 sudo usermod -aG video "$USER"
 
