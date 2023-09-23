@@ -24,6 +24,9 @@ sudo xbps-install -y i3-gaps i3status picom nitrogen lxappearance feh rofi
 # Install terminal
 sudo xbps-install -y alacritty
 
+# Audio
+xbps-install pulseaudio pavucontrol
+
 # Install LightDM and the GTK greeter
 sudo xbps-install -y lightdm lightdm-gtk3-greeter
 sudo ln -s /etc/sv/lightdm /var/service/
@@ -31,12 +34,12 @@ sudo ln -s /etc/sv/lightdm /var/service/
 # Enable dbus-service
 sudo ln -sf /etc/sv/dbus /var/service
 
-# Add your user to the video group for graphics acceleration (replace 'yourusername' with your actual username)
-sudo usermod -aG video "$USER"
+# Non-free repos
+xbps-install void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 
 # Useful stuff
 sudo xbps-install -y flameshot neovim btop firefox wget curl keepassxc neofetch
-# sudo xbps-install -Sy vpm void-repo-nonfree
+# sudo xbps-install -Sy vpm
 
 # Network manager
 xbps-install -y NetworkManager
