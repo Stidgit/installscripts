@@ -8,37 +8,37 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 # Update package repositories and upgrade existing packages
-sudo xbps-install -Suv
-sudo xbps-install -u xbps
+xbps-install -Suv
+xbps-install -u xbps
 
 # Restarting services after update
-sudo xbps-install xtools
+xbps-install xtools
 xcheckrestart
 
 # xorg
-sudo xbps-install -y xorg
+xbps-install -y xorg
 
 # Install i3 window manager and other essential tools
-sudo xbps-install -y i3-gaps i3status picom nitrogen lxappearance feh rofi
+xbps-install -y i3-gaps i3status picom nitrogen lxappearance feh rofi
 
 # Install terminal
-sudo xbps-install -y alacritty
+xbps-install -y alacritty
 
 # Audio
 xbps-install pulseaudio pavucontrol
 
 # Install LightDM and the GTK greeter
-sudo xbps-install -y lightdm lightdm-gtk3-greeter
-sudo ln -s /etc/sv/lightdm /var/service/
+xbps-install -y lightdm lightdm-gtk3-greeter
+ln -s /etc/sv/lightdm /var/service/
 
 # Enable dbus-service
-sudo ln -sf /etc/sv/dbus /var/service
+ln -sf /etc/sv/dbus /var/service
 
 # Non-free repos
 xbps-install void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 
 # Useful stuff
-sudo xbps-install -y flameshot neovim btop firefox wget curl keepassxc neofetch
+xbps-install -y flameshot neovim btop firefox wget curl keepassxc neofetch
 # sudo xbps-install -Sy vpm
 
 # Network manager
@@ -46,17 +46,13 @@ xbps-install -y NetworkManager
 ln -s /etc/sv/NetworkManager /var/service/
 
 # Virtualization
-sudo xbps-install -y virt-manager qemu
+xbps-install -y virt-manager qemu libvirtd
+xbps-install bridge-utils iptables
 
-# Reboot
-read -p "Installation complete. Reboot now? (y/n): " choice
-case "$choice" in
-  [yY]|[yY][eE][sS])
-    sudo reboot
-    ;;
-  *)
-    echo "You can manually reboot your system when you're ready."
-    ;;
-esac
+ln -s /etc/sv/libvirtd /var/service
+ln -s /etc/sv/virtlockd /var/service
+ln -s /etc/sv/virtlogd /var/service
 
+# Finished
+echo "You can manually reboot your system when you're ready, eg. sudo reboot"
 
