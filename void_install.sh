@@ -39,6 +39,10 @@ xbps-install -y void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 xbps-install -y flameshot neovim btop firefox wget curl keepassxc neofetch mpv
 # sudo xbps-install -Sy vpm
 
+# Programming
+xbps-install -y python3-pip python3 gdb gcc glibc-devel nasm
+xbps-install -y vscode # telemetry free version
+
 # Network manager
 xbps-install -y NetworkManager
 ln -s /etc/sv/NetworkManager /var/service/
