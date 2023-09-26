@@ -1,6 +1,7 @@
 #!/bin/sh
-set -e
 # Quick Install script for Void Linux
+set -e
+
 # Ensure root
 if [ "$(id -u)" -ne 0 ]; then
   echo "\e[32mPlease run as root\e[0m"
