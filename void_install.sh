@@ -27,10 +27,6 @@ xbps-install -y alacritty
 # Audio
 xbps-install pulseaudio pavucontrol
 
-# Install LightDM and the GTK greeter
-xbps-install -y lightdm lightdm-gtk3-greeter
-ln -s /etc/sv/lightdm /var/service/
-
 # Enable dbus-service
 ln -sf /etc/sv/dbus /var/service
 
@@ -38,7 +34,7 @@ ln -sf /etc/sv/dbus /var/service
 xbps-install void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 
 # Useful stuff
-xbps-install -y flameshot neovim btop firefox wget curl keepassxc neofetch
+xbps-install -y flameshot neovim btop firefox wget curl keepassxc neofetch mpv
 # sudo xbps-install -Sy vpm
 
 # Network manager
@@ -52,6 +48,10 @@ xbps-install bridge-utils iptables
 ln -s /etc/sv/libvirtd /var/service
 ln -s /etc/sv/virtlockd /var/service
 ln -s /etc/sv/virtlogd /var/service
+
+# Install LightDM and the GTK greeter
+xbps-install -y lightdm lightdm-gtk3-greeter
+ln -s /etc/sv/lightdm /var/service/
 
 # Finished
 echo "You can manually reboot your system when you're ready, eg. sudo reboot"
