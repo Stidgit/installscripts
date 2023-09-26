@@ -12,7 +12,7 @@ xbps-install -Suv
 xbps-install -u xbps
 
 # Restarting services after update
-xbps-install xtools
+xbps-install -y xtools
 xcheckrestart
 
 # xorg
@@ -23,15 +23,16 @@ xbps-install -y i3-gaps i3status picom nitrogen lxappearance feh rofi
 
 # Install terminal
 xbps-install -y alacritty
+#xbps-install -y kitty
 
 # Audio
-xbps-install pulseaudio pavucontrol
+xbps-install -y pulseaudio pavucontrol
 
 # Enable dbus-service
 ln -sf /etc/sv/dbus /var/service
 
 # Non-free repos
-xbps-install void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
+xbps-install -y void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 
 # Useful stuff
 xbps-install -y flameshot neovim btop firefox wget curl keepassxc neofetch mpv
@@ -53,6 +54,5 @@ ln -s /etc/sv/virtlogd /var/service
 xbps-install -y lightdm lightdm-gtk3-greeter
 ln -s /etc/sv/lightdm /var/service/
 
-# Finished
 echo "You can manually reboot your system when you're ready, eg. sudo reboot"
 
