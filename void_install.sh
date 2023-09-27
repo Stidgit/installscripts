@@ -14,7 +14,6 @@ xbps-install -u xbps
 
 # Restarting services after update
 xbps-install -y xtools
-xcheckrestart
 
 # xorg
 xbps-install -y xorg
@@ -54,6 +53,7 @@ xbps-install bridge-utils iptables
 ln -s /etc/sv/libvirtd /var/service
 ln -s /etc/sv/virtlockd /var/service
 ln -s /etc/sv/virtlogd /var/service
+xcheckrestart
 
 # Install LightDM and the GTK greeter
 xbps-install -y lightdm lightdm-gtk3-greeter
