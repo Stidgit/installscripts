@@ -39,7 +39,7 @@ xbps-install -y flameshot neovim btop firefox wget curl keepassxc neofetch mpv
 # sudo xbps-install -Sy vpm
 
 # Programming
-xbps-install -y python3-pip python3 gdb gcc glibc-devel nasm ltrace strace go
+xbps-install -y python3-pip python3 gdb gcc glibc-devel nasm ltrace strace go android-tools
 xbps-install -y vscode # telemetry free version
 
 # Network manager
