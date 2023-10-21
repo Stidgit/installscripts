@@ -36,6 +36,8 @@ xbps-install -y void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 
 # Useful stuff
 xbps-install -y flameshot neovim btop firefox wget curl keepassxc neofetch mpv
+# NerdFonts - ~4gb
+sudo xbps-install nerd-fonts
 # sudo xbps-install -Sy vpm
 
 # Programming
