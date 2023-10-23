@@ -41,7 +41,7 @@ sudo xbps-install nerd-fonts
 # sudo xbps-install -Sy vpm
 
 # Programming
-xbps-install -y python3-pip python3 gdb gcc glibc-devel nasm ltrace strace go android-tools
+xbps-install -y python3-pip python3 gdb gcc glibc-devel nasm ltrace strace
 xbps-install -y vscode # telemetry free version
 
 # Network manager
@@ -49,7 +49,7 @@ xbps-install -y NetworkManager
 ln -s /etc/sv/NetworkManager /var/service/
 
 # Virtualization
-xbps-install -y virt-manager qemu libvirtd
+xbps-install -y virt-manager qemu libvirt
 xbps-install bridge-utils iptables
 
 ln -s /etc/sv/libvirtd /var/service
