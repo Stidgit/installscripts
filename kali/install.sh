@@ -2,13 +2,13 @@
 
 # Check if running as root
 if [ "$EUID" -ne 0 ]; then
-    echo "Please run as root."
+    echo "Ensure as root"
     exit 1
 fi
 
 # Update the package list
 if ! apt update; then
-    echo "Failed to update package list. Exiting."
+    echo "Update failed"
     exit 1
 fi
 
@@ -23,6 +23,6 @@ if ! apt install -y i3 \
                     btop \
                     ranger \
                     neovim; then
-    echo "Failed to install packages. Exiting."
+    echo "Failed to install packages"
     exit 1
 fi
